@@ -179,5 +179,5 @@ cp ./ttn-gateway.service /lib/systemd/system/
 systemctl enable ttn-gateway.service
 
 echo "The system will reboot in 5 seconds..."
-sleep 5
-shutdown -r now
+#sleep 5
+#shutdown -r now
