@@ -121,16 +121,16 @@ make
 popd
 
 # Build packet forwarder
-#if [ ! -d packet_forwarder ]; then
+if [ ! -d packet_forwarder ]; then
     # git clone https://github.com/TheThingsNetwork/packet_forwarder.git
     # using charles forwarder, configured for it's status LEDs
     git clone https://github.com/ch2i/packet_forwarder.git
     pushd packet_forwarder
-#else
-#    pushd packet_forwarder
-#    git pull
-#    git reset --hard
-#fi
+else
+    pushd packet_forwarder
+    git pull
+    git reset --hard
+fi
 
 make
 
@@ -178,6 +178,6 @@ cp ./start.sh $INSTALL_DIR/bin/
 cp ./ttn-gateway.service /lib/systemd/system/
 systemctl enable ttn-gateway.service
 
-echo "The system will reboot in 5 seconds..."
+echo "You should reboot the system after copying the installation messages"
 #sleep 5
 #shutdown -r now
