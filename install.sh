@@ -141,7 +141,8 @@ popd
 if [ ! -d packet_forwarder ]; then
     # git clone https://github.com/TheThingsNetwork/packet_forwarder.git
     # using charles forwarder, configured for CoreDump backplane status LEDs
-    git clone https://github.com/ch2i/packet_forwarder.git
+    # git clone https://github.com/ch2i/packet_forwarder.git
+    git clone https://github.com/urs8000/packet_forwarder/tree/CoreDump-backplane.git
     pushd packet_forwarder
 else
     pushd packet_forwarder
